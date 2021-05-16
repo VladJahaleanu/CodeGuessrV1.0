@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/styles/style.css" type = "text/css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700;800&family=Roboto:ital,wght@0,400;0,700;0,900;1,300;1,700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    
+    <title>CodeGuessr</title>
+</head>
+<body id = "body">
+    <div class="main" id = "add_button_modal">
+        <div class = "top_score">
+            <h1 class = "top_score_number" id = "top_score_number_id">0</h1>
+            <h2 class = "top_score_text">Points</h2>
+            <div class = "modal__overlay">
+                <div class = "modal">
+                    <div class = "modal__content">
+                        <h2 class = "title">Add a code snippet</h2>
+                        <div class = "inputs__container">
+                            <input id = "formLanguage" type = "text" class = "input" placeholder = "Please enter the programming language">
+                            <input id = "formImgUrl" type = "text" class = "input input--img" placeholder = "Please enter image url">
+                        </div>
+                        <div class="modal__buttons">
+                            <button id = "cancel" type="button" class = "animatedButton">Cancel</button>
+                            <button id = "save" type="button" class = "animatedButton">Save</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div id = "code_container">
+            <h3 class = "intrebare"> Guess the programming language!</h3>
+            <div id = "code_snippet">
+            </div>
+
+        </div>
+
+        <div class = "answers" id = "answers">
+    
+        </div> 
+        <div class = "bottom" id = "bottom">
+            <div class = "final_score" id = "final_score">
+                <!-- <span class = "final_score_number" id = "final_score_number_id">0</span>
+                <span class = "final_score_text" id = "final_score_text_id">Points</span>
+                <p class = "end_text" id = "end_text_id">Better luck next time!</p> -->
+            </div>
+            <!-- <button class = "buton_next animatedButton" id = "buton_next_id">Next</button>
+            <button class = "buton_retry animatedButton" id = "buton_retry_id">Retry</button> -->
+
+        </div>
+        <div id = "add_button_modal" class = "add_div">
+
+        </div>
+
+
+    </div>
+    <!-- <footer>
+        <p class = "author">Designed by Vlad Jahaleanu<br>
+            <a href="https://www.linkedin.com/in/vladjahaleanu/" class="fa fa-linkedin"></a>
+            <a href="https://instagram.com/jahaleanuvlad" class="fa fa-instagram"></a>
+            <a href="https://www.facebook.com/vlad.jahaleanu" class="fa fa-facebook"></a>
+      </footer> -->
+    <script src = "script.js"></script>
+</body>
+</html>
