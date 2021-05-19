@@ -19,6 +19,7 @@ var languages = ["C++", "Python", "Objective-C", "JavaScript", "Mindfuck", "Lua"
 var correctLanguage;
 var points = 0;
 var rightNumberIndex;
+var numberOfGists = 18;
 
 const codeSnippet = document.getElementById("code_snippet");
 const answers = document.getElementById("answers");
@@ -70,6 +71,8 @@ function addGistToServer() {
         // Get the new article list
         renderGists();
 
+        numberOfGists++;
+
         // Reset Form
         resetForm();
 
@@ -83,7 +86,7 @@ function addGistToServer() {
 
 
 function getGist() {
-    let randomNumber = getRandomInt(18);
+    let randomNumber = getRandomInt(numberOfGists);
 
     createAndRenderGist(data1[randomNumber]);
 
@@ -96,6 +99,7 @@ function createAndRenderGist(gist) {
     const img = document.createElement('img');
     img.setAttribute("src", gist.src);
     img.setAttribute('id', 'gist');
+    img.classList.add('roundedImg');
 
     //  Render
     codeSnippet.innerText = '';

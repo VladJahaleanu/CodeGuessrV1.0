@@ -92,6 +92,7 @@ app.delete("/gists/:id", (req, res) => {
   if (gistsList.length !== newGistsList.length) {
     res.status(200).send(`gist ${id} was removed`);
     writeJSONFile(newGistsList);
+    idx--;
   } else {
     res.status(404).send(`gist ${id} was not found`);
   }
