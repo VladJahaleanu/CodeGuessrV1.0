@@ -3,7 +3,7 @@ const morgan = require("morgan");
 const bodyParser = require("body-parser");
 const cors = require("cors");
 
-var idx = 19;
+var idx = 20;
 
 const fs = require("fs");
 
@@ -81,21 +81,6 @@ app.put("/gists/:id", (req, res) => {
     res.status(404).send(`gist ${id} was not found`);
   }
 
-});
-
-// Delete
-app.delete("/gists/:id", (req, res) => {
-  const gistsList = readJSONFile();
-  const id = req.params.id;
-  const newGistsList = gistsList.filter((gist) => gist.id !== id)
-
-  if (gistsList.length !== newGistsList.length) {
-    res.status(200).send(`gist ${id} was removed`);
-    writeJSONFile(newGistsList);
-    idx--;
-  } else {
-    res.status(404).send(`gist ${id} was not found`);
-  }
 });
 
 // Functia de citire din fisierul db.json
